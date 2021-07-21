@@ -3,8 +3,8 @@ const {resolve} = path;
 module.exports = {
     entry: resolve(__dirname,"../src/index.tsx"),
     output: {
-        filename: 'ilb/[name].js',
-        path: resolve(__dirname, '../build'),
+        filename: '[name].js',
+        chunkFilename: "[name].js",
         publicPath: '/'
     },
 
@@ -79,9 +79,7 @@ module.exports = {
         ]
     },
     resolve:{
-        alias: { // 配置路径别名
-            "src":resolve(__dirname, '../src'),
-        },
+
         extensions: [".js", ".jsx" ,".json", ".less" , ".ts", ".tsx"] // 自动解析文件扩展名
     },
     performance: {

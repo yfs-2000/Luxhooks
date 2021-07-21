@@ -1,17 +1,26 @@
 {
   "name": "luxhooks",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "自己为公司lux开发的hooks",
-  "main": "index.tsx",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.umd.js",
+  "sideEffects": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --config ./config/webpack.dev.js",
-    "build": "webpack --config ./config/webpack.pro.js"
+    "build": "father build",
+    "doc dev": "father doc dev",
+    "doc build": "father doc build"
   },
   "author": "",
   "license": "ISC",
-  "keywords":["react","hooks","lux"],
-  "dependencies": {
+  "keywords": [
+    "react",
+    "hooks",
+    "lux"
+  ],
+  "peerDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/plugin-proposal-object-rest-spread": "^7.14.7",
@@ -22,10 +31,13 @@
     "@types/node": "^16.3.3",
     "@types/react": "^17.0.14",
     "babel-loader": "^8.2.2",
+    "babel-plugin-transform-async-to-promises": "^0.8.15",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "core-js": "^3.15.2",
     "css-loader": "^6.2.0",
     "cssnano": "^5.0.6",
+    "del": "^6.0.0",
+    "father": "^2.30.6",
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
@@ -41,5 +53,8 @@
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.8.0"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }

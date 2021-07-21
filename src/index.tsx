@@ -1,1 +1,4 @@
-export  {  default  as  useClickAway  } from "./hooks/useClickAway";
+import useClickAway from "./hooks/useClickAway";
+export {
+    useClickAway
+}

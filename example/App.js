@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import {useClickAway} from 'src'
+import {useClickAway} from 'index'
 const App = () => {
     const refs = useRef(null)
 
